@@ -1,0 +1,47 @@
+# TripletexApi::TravelExpense
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**version** | **Integer** |  | [optional] 
+**changes** | [**Array&lt;Change&gt;**](Change.md) |  | [optional] 
+**url** | **String** |  | [optional] 
+**project** | [**Project**](Project.md) |  | [optional] 
+**employee** | [**Employee**](Employee.md) |  | 
+**approved_by** | [**Employee**](Employee.md) |  | [optional] 
+**completed_by** | [**Employee**](Employee.md) |  | [optional] 
+**department** | [**Department**](Department.md) |  | [optional] 
+**payslip** | [**Payslip**](Payslip.md) |  | [optional] 
+**vat_type** | [**VatType**](VatType.md) |  | [optional] 
+**payment_currency** | [**Currency**](Currency.md) |  | [optional] 
+**travel_details** | [**TravelDetails**](TravelDetails.md) |  | [optional] 
+**voucher** | [**Voucher**](Voucher.md) |  | [optional] 
+**is_completed** | **BOOLEAN** |  | [optional] [default to false]
+**is_approved** | **BOOLEAN** |  | [optional] [default to false]
+**is_chargeable** | **BOOLEAN** |  | [optional] [default to false]
+**is_fixed_invoiced_amount** | **BOOLEAN** |  | [optional] [default to false]
+**is_include_attached_receipts_when_reinvoicing** | **BOOLEAN** |  | [optional] [default to false]
+**completed_date** | **String** |  | [optional] 
+**approved_date** | **String** |  | [optional] 
+**date** | **String** |  | [optional] 
+**travel_advance** | **Float** |  | [optional] 
+**fixed_invoiced_amount** | **Float** |  | [optional] 
+**amount** | **Float** |  | [optional] 
+**low_rate_vat** | **Float** |  | [optional] 
+**medium_rate_vat** | **Float** |  | [optional] 
+**high_rate_vat** | **Float** |  | [optional] 
+**payment_amount** | **Float** |  | [optional] 
+**payment_amount_currency** | **Float** |  | [optional] 
+**number** | **Integer** |  | [optional] 
+**invoice** | [**Invoice**](Invoice.md) |  | [optional] 
+**title** | **String** |  | [optional] 
+**per_diem_compensations** | [**Array&lt;PerDiemCompensation&gt;**](PerDiemCompensation.md) | Link to individual per diem compensations. | [optional] 
+**mileage_allowances** | [**Array&lt;MileageAllowance&gt;**](MileageAllowance.md) | Link to individual mileage allowances. | [optional] 
+**accommodation_allowances** | [**Array&lt;AccommodationAllowance&gt;**](AccommodationAllowance.md) | Link to individual accommodation allowances. | [optional] 
+**costs** | [**Array&lt;Cost&gt;**](Cost.md) | Link to individual costs. | [optional] 
+**attachment_count** | **Integer** |  | [optional] 
+**state** | **String** |  | [optional] 
+**actions** | [**Array&lt;Link&gt;**](Link.md) |  | [optional] 
+
+
