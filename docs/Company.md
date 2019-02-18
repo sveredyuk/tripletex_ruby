@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **version** | **Integer** |  | [optional] 
 **changes** | [**Array&lt;Change&gt;**](Change.md) |  | [optional] 
 **url** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**name** | **String** |  | 
 **start_date** | **String** |  | [optional] 
 **end_date** | **String** |  | [optional] 
 **organization_number** | **String** |  | [optional] 

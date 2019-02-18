@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **number_of_employees** | **Integer** | The number of employees in the customer company. Is used for calculating prices and setting some default settings, i.e. approval settings for timesheet. | [optional] 
 **number_of_vouchers** | **String** | Number of vouchers each year. Used to calculate prices. | 
 **administrator_password** | **String** | The password of the administrator user. | [optional] 
+**chart_of_accounts_type** | **String** | The chart of accounts to use for the new company | [optional] 
 
 

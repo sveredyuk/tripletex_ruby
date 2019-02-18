@@ -5,8 +5,9 @@ All URIs are relative to *https://tripletex.no/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get**](CompanyApi.md#get) | **GET** /company/{id} | Find company by ID.
-[**get_divisions**](CompanyApi.md#get_divisions) | **GET** /company/divisions | Find divisions.
+[**get_divisions**](CompanyApi.md#get_divisions) | **GET** /company/divisions | [DEPRECATED] Find divisions.
 [**get_with_login_access**](CompanyApi.md#get_with_login_access) | **GET** /company/&gt;withLoginAccess | Returns client customers (with accountant/auditor relation) where the current user has login access (proxy login).
+[**put**](CompanyApi.md#put) | **PUT** /company | Update company information.
 
 
 # **get**
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 # **get_divisions**
 > ListResponseCompany get_divisions(opts)
 
-Find divisions.
+[DEPRECATED] Find divisions.
 
 
 
@@ -94,7 +95,7 @@ opts = {
 }
 
 begin
-  #Find divisions.
+  #[DEPRECATED] Find divisions.
   result = api_instance.get_divisions(opts)
   p result
 rescue TripletexApi::ApiError => e
@@ -182,6 +183,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+# **put**
+> ResponseWrapperCompany put(opts)
+
+Update company information.
+
+
+
+### Example
+```ruby
+# load the gem
+require 'tripletex_api'
+# setup authorization
+TripletexApi.configure do |config|
+  # Configure HTTP basic authorization: tokenAuthScheme
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = TripletexApi::CompanyApi.new
+
+opts = { 
+  body: TripletexApi::Company.new # Company | Partial object describing what should be updated
+}
+
+begin
+  #Update company information.
+  result = api_instance.put(opts)
+  p result
+rescue TripletexApi::ApiError => e
+  puts "Exception when calling CompanyApi->put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Company**](Company.md)| Partial object describing what should be updated | [optional] 
+
+### Return type
+
+[**ResponseWrapperCompany**](ResponseWrapperCompany.md)
+
+### Authorization
+
+[tokenAuthScheme](../README.md#tokenAuthScheme)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: Not defined
 
 

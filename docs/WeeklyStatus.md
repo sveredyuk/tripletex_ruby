@@ -1,4 +1,4 @@
-# TripletexApi::WeeklyStatus
+# TripletexApi::Week
 
 ## Properties
 Name | Type | Description | Notes

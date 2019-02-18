@@ -9,12 +9,14 @@ Method | HTTP request | Description
 [**create_vouchers**](TravelExpenseApi.md#create_vouchers) | **PUT** /travelExpense/:createVouchers | [BETA] Create vouchers
 [**delete**](TravelExpenseApi.md#delete) | **DELETE** /travelExpense/{id} | [BETA] Delete travel expense.
 [**deliver**](TravelExpenseApi.md#deliver) | **PUT** /travelExpense/:deliver | [BETA] Deliver travel expenses.
+[**download_attachment**](TravelExpenseApi.md#download_attachment) | **GET** /travelExpense/{travelExpenseId}/attachment | Get attachment by travel expense ID.
 [**get**](TravelExpenseApi.md#get) | **GET** /travelExpense/{id} | [BETA] Get travel expense by ID.
 [**post**](TravelExpenseApi.md#post) | **POST** /travelExpense | [BETA] Create travel expense.
 [**put**](TravelExpenseApi.md#put) | **PUT** /travelExpense/{id} | [BETA] Update travel expense.
 [**search**](TravelExpenseApi.md#search) | **GET** /travelExpense | [BETA] Find travel expenses corresponding with sent data.
 [**unapprove**](TravelExpenseApi.md#unapprove) | **PUT** /travelExpense/:unapprove | [BETA] Unapprove travel expenses.
 [**undeliver**](TravelExpenseApi.md#undeliver) | **PUT** /travelExpense/:undeliver | [BETA] Undeliver travel expenses.
+[**upload_attachment**](TravelExpenseApi.md#upload_attachment) | **POST** /travelExpense/{travelExpenseId}/attachment | Upload attachment to travel expense.
 
 
 # **approve**
@@ -284,6 +286,59 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+
+
+# **download_attachment**
+> String download_attachment(travel_expense_id)
+
+Get attachment by travel expense ID.
+
+
+
+### Example
+```ruby
+# load the gem
+require 'tripletex_api'
+# setup authorization
+TripletexApi.configure do |config|
+  # Configure HTTP basic authorization: tokenAuthScheme
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = TripletexApi::TravelExpenseApi.new
+
+travel_expense_id = 56 # Integer | Travel Expense ID from which PDF is downloaded.
+
+
+begin
+  #Get attachment by travel expense ID.
+  result = api_instance.download_attachment(travel_expense_id)
+  p result
+rescue TripletexApi::ApiError => e
+  puts "Exception when calling TravelExpenseApi->download_attachment: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **travel_expense_id** | **Integer**| Travel Expense ID from which PDF is downloaded. | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[tokenAuthScheme](../README.md#tokenAuthScheme)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
 
 
 
@@ -633,6 +688,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+# **upload_attachment**
+> upload_attachment(travel_expense_id, file)
+
+Upload attachment to travel expense.
+
+
+
+### Example
+```ruby
+# load the gem
+require 'tripletex_api'
+# setup authorization
+TripletexApi.configure do |config|
+  # Configure HTTP basic authorization: tokenAuthScheme
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = TripletexApi::TravelExpenseApi.new
+
+travel_expense_id = 56 # Integer | Travel Expense ID to upload attachment to.
+
+file = File.new("/path/to/file.txt") # File | The file
+
+
+begin
+  #Upload attachment to travel expense.
+  api_instance.upload_attachment(travel_expense_id, file)
+rescue TripletexApi::ApiError => e
+  puts "Exception when calling TravelExpenseApi->upload_attachment: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **travel_expense_id** | **Integer**| Travel Expense ID to upload attachment to. | 
+ **file** | **File**| The file | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[tokenAuthScheme](../README.md#tokenAuthScheme)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
 

@@ -418,6 +418,7 @@ opts = {
   id: "id_example", # String | List of IDs
   number: "number_example", # String | List of IDs
   is_bank_account: true, # BOOLEAN | Equals
+  is_inactive: true, # BOOLEAN | Equals
   from: 0, # Integer | From index
   count: 1000, # Integer | Number of elements to return
   sorting: "sorting_example", # String | Sorting pattern
@@ -440,6 +441,7 @@ Name | Type | Description  | Notes
  **id** | **String**| List of IDs | [optional] 
  **number** | **String**| List of IDs | [optional] 
  **is_bank_account** | **BOOLEAN**| Equals | [optional] 
+ **is_inactive** | **BOOLEAN**| Equals | [optional] 
  **from** | **Integer**| From index | [optional] [default to 0]
  **count** | **Integer**| Number of elements to return | [optional] [default to 1000]
  **sorting** | **String**| Sorting pattern | [optional] 

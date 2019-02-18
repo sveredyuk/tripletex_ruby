@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 
 # **payment**
-> ResponseWrapperInvoice payment(id, payment_date, payment_type_id, paid_amount)
+> ResponseWrapperInvoice payment(id, payment_date, payment_type_id, paid_amount, opts)
 
 Update invoice. The invoice is updated with payment information. The amount is in the invoice’s currency.
 
@@ -281,12 +281,15 @@ payment_date = "payment_date_example" # String | Payment date
 
 payment_type_id = 56 # Integer | PaymentType id
 
-paid_amount = 8.14 # Float | Amount paid by customer
+paid_amount = 8.14 # Float | Amount paid by customer in the company currency, typically NOK.
 
+opts = { 
+  paid_amount_currency: 8.14 # Float | Amount paid by customer in the invoice currency. Optional, but required for invoices in alternate currencies.
+}
 
 begin
   #Update invoice. The invoice is updated with payment information. The amount is in the invoice’s currency.
-  result = api_instance.payment(id, payment_date, payment_type_id, paid_amount)
+  result = api_instance.payment(id, payment_date, payment_type_id, paid_amount, opts)
   p result
 rescue TripletexApi::ApiError => e
   puts "Exception when calling InvoiceApi->payment: #{e}"
@@ -300,7 +303,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Invoice id | 
  **payment_date** | **String**| Payment date | 
  **payment_type_id** | **Integer**| PaymentType id | 
- **paid_amount** | **Float**| Amount paid by customer | 
+ **paid_amount** | **Float**| Amount paid by customer in the company currency, typically NOK. | 
+ **paid_amount_currency** | **Float**| Amount paid by customer in the invoice currency. Optional, but required for invoices in alternate currencies. | [optional] 
 
 ### Return type
 

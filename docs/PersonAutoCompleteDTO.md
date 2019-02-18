@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **country_id** | **Integer** |  | [optional] 
+**reserved** | **BOOLEAN** |  | [optional] [default to false]
 
 
