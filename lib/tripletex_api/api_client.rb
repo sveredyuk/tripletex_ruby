@@ -63,6 +63,7 @@ module TripletexApi
                             :message => response.return_message)
         else
           fail ApiError.new(:code => response.code,
+                            :message => response.body,
                             :response_headers => response.headers,
                             :response_body => response.body),
                response.status_message
