@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adjustment**](BankreconciliationApi.md#adjustment) | **PUT** /bank/reconciliation/{id}/:adjustment | [BETA] Add an adjustment to reconciliation by ID.
 [**delete**](BankreconciliationApi.md#delete) | **DELETE** /bank/reconciliation/{id} | [BETA] Delete bank reconciliation by ID.
+[**fetch_from_bank**](BankreconciliationApi.md#fetch_from_bank) | **PUT** /bank/reconciliation/:fetchFromBank | [BETA] Create a bank reconciliation by fetching bank statement from the bank.
 [**get**](BankreconciliationApi.md#get) | **GET** /bank/reconciliation/{id} | [BETA] Get bank reconciliation.
 [**last_closed**](BankreconciliationApi.md#last_closed) | **GET** /bank/reconciliation/&gt;lastClosed | [BETA] Get last closed reconciliation by account ID.
 [**post**](BankreconciliationApi.md#post) | **POST** /bank/reconciliation | [BETA] Post a bank reconciliation.
@@ -14,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **adjustment**
-> ListResponsePosting adjustment(id, payment_type_id, posting_date, amount)
+> ListResponseBankReconciliationAdjustment adjustment(id, opts)
 
 [BETA] Add an adjustment to reconciliation by ID.
 
@@ -35,16 +36,13 @@ api_instance = TripletexApi::BankreconciliationApi.new
 
 id = 56 # Integer | Element ID
 
-payment_type_id = 56 # Integer | Bank reconciliation PaymentType ID.
-
-posting_date = "posting_date_example" # String | Format is yyyy-MM-dd
-
-amount = 8.14 # Float | Amount
-
+opts = { 
+  body: [TripletexApi::BankReconciliationAdjustment.new] # Array<BankReconciliationAdjustment> | Adjustments
+}
 
 begin
   #[BETA] Add an adjustment to reconciliation by ID.
-  result = api_instance.adjustment(id, payment_type_id, posting_date, amount)
+  result = api_instance.adjustment(id, opts)
   p result
 rescue TripletexApi::ApiError => e
   puts "Exception when calling BankreconciliationApi->adjustment: #{e}"
@@ -56,13 +54,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Element ID | 
- **payment_type_id** | **Integer**| Bank reconciliation PaymentType ID. | 
- **posting_date** | **String**| Format is yyyy-MM-dd | 
- **amount** | **Float**| Amount | 
+ **body** | [**Array&lt;BankReconciliationAdjustment&gt;**](BankReconciliationAdjustment.md)| Adjustments | [optional] 
 
 ### Return type
 
-[**ListResponsePosting**](ListResponsePosting.md)
+[**ListResponseBankReconciliationAdjustment**](ListResponseBankReconciliationAdjustment.md)
 
 ### Authorization
 
@@ -70,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json; charset=utf-8
  - **Accept**: Not defined
 
 
@@ -115,6 +111,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### Authorization
+
+[tokenAuthScheme](../README.md#tokenAuthScheme)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+# **fetch_from_bank**
+> ResponseWrapperBankReconciliation fetch_from_bank(account_id, accounting_period_id)
+
+[BETA] Create a bank reconciliation by fetching bank statement from the bank.
+
+
+
+### Example
+```ruby
+# load the gem
+require 'tripletex_api'
+# setup authorization
+TripletexApi.configure do |config|
+  # Configure HTTP basic authorization: tokenAuthScheme
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = TripletexApi::BankreconciliationApi.new
+
+account_id = 56 # Integer | Element ID
+
+accounting_period_id = 56 # Integer | Element ID
+
+
+begin
+  #[BETA] Create a bank reconciliation by fetching bank statement from the bank.
+  result = api_instance.fetch_from_bank(account_id, accounting_period_id)
+  p result
+rescue TripletexApi::ApiError => e
+  puts "Exception when calling BankreconciliationApi->fetch_from_bank: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **Integer**| Element ID | 
+ **accounting_period_id** | **Integer**| Element ID | 
+
+### Return type
+
+[**ResponseWrapperBankReconciliation**](ResponseWrapperBankReconciliation.md)
 
 ### Authorization
 

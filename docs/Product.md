@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **url** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **number** | **String** |  | [optional] 
+**el_number** | **String** |  | [optional] 
+**nrf_number** | **String** |  | [optional] 
 **cost_excluding_vat_currency** | **Float** | Price purchase (cost) excluding VAT in the product&#39;s currency | [optional] 
 **price_excluding_vat_currency** | **Float** | Price of purchase excluding VAT in the product&#39;s currency | [optional] 
 **price_including_vat_currency** | **Float** | Price of purchase including VAT in the product&#39;s currency | [optional] 
@@ -20,5 +22,8 @@ Name | Type | Description | Notes
 **currency** | [**Currency**](Currency.md) |  | [optional] 
 **department** | [**Department**](Department.md) |  | [optional] 
 **account** | [**Account**](Account.md) |  | [optional] 
+**discount_price** | **Float** |  | [optional] 
+**supplier** | [**Supplier**](Supplier.md) |  | [optional] 
+**resale_product** | [**Product**](Product.md) |  | [optional] 
 
 

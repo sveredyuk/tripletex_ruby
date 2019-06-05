@@ -90,7 +90,7 @@ api_instance = TripletexApi::OrderApi.new
 
 id = 56 # Integer | ID of order to invoice.
 
-invoice_date = "invoice_date_example" # String | To and excluding
+invoice_date = "invoice_date_example" # String | The invoice date
 
 opts = { 
   send_to_customer: true, # BOOLEAN | Send invoice to customer
@@ -112,7 +112,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID of order to invoice. | 
- **invoice_date** | **String**| To and excluding | 
+ **invoice_date** | **String**| The invoice date | 
  **send_to_customer** | **BOOLEAN**| Send invoice to customer | [optional] [default to true]
  **payment_type_id** | **Integer**| Payment type to register prepayment of the invoice. paymentTypeId and paidAmount are optional, but both must be provided if the invoice has already been paid. | [optional] 
  **paid_amount** | **Float**| Paid amount to register prepayment of the invoice, in invoice currency. paymentTypeId and paidAmount are optional, but both must be provided if the invoice has already been paid. | [optional] 

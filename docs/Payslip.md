@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **vacation_allowance_amount** | **Float** |  | [optional] 
 **gross_amount** | **Float** |  | [optional] 
 **amount** | **Float** |  | [optional] 
+**number** | **Integer** |  | [optional] 
 
 

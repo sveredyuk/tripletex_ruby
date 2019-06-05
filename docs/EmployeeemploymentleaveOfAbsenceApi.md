@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get**](EmployeeemploymentleaveOfAbsenceApi.md#get) | **GET** /employee/employment/leaveOfAbsence/{id} | [BETA] Find leave of absence by ID.
 [**post**](EmployeeemploymentleaveOfAbsenceApi.md#post) | **POST** /employee/employment/leaveOfAbsence | [BETA] Create leave of absence.
+[**post_list**](EmployeeemploymentleaveOfAbsenceApi.md#post_list) | **POST** /employee/employment/leaveOfAbsence/list | [BETA] Create multiple leave of absences.
 [**put**](EmployeeemploymentleaveOfAbsenceApi.md#put) | **PUT** /employee/employment/leaveOfAbsence/{id} | [BETA] Update leave of absence. 
 
 
@@ -108,6 +109,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ResponseWrapperLeaveOfAbsence**](ResponseWrapperLeaveOfAbsence.md)
+
+### Authorization
+
+[tokenAuthScheme](../README.md#tokenAuthScheme)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: Not defined
+
+
+
+# **post_list**
+> ListResponseLeaveOfAbsence post_list(opts)
+
+[BETA] Create multiple leave of absences.
+
+
+
+### Example
+```ruby
+# load the gem
+require 'tripletex_api'
+# setup authorization
+TripletexApi.configure do |config|
+  # Configure HTTP basic authorization: tokenAuthScheme
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = TripletexApi::EmployeeemploymentleaveOfAbsenceApi.new
+
+opts = { 
+  body: [TripletexApi::LeaveOfAbsence.new] # Array<LeaveOfAbsence> | JSON representing a list of new object to be created. Should not have ID and version set.
+}
+
+begin
+  #[BETA] Create multiple leave of absences.
+  result = api_instance.post_list(opts)
+  p result
+rescue TripletexApi::ApiError => e
+  puts "Exception when calling EmployeeemploymentleaveOfAbsenceApi->post_list: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Array&lt;LeaveOfAbsence&gt;**](LeaveOfAbsence.md)| JSON representing a list of new object to be created. Should not have ID and version set. | [optional] 
+
+### Return type
+
+[**ListResponseLeaveOfAbsence**](ListResponseLeaveOfAbsence.md)
 
 ### Authorization
 

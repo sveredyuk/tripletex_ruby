@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **date** | **String** | Voucher date. | [optional] 
 **year** | **Integer** |  | 
 **month** | **Integer** |  | 
+**is_historical** | **BOOLEAN** | With historical wage vouchers you can update the wage system with information dated before the opening balance. | [optional] [default to false]
 **payslips** | [**Array&lt;Payslip&gt;**](Payslip.md) | Link to individual payslip objects. | 
 
 

@@ -17,5 +17,8 @@ Name | Type | Description | Notes
 **comment** | **String** |  | [optional] 
 **locked** | **BOOLEAN** | Indicates if the hour can be changed. | [optional] [default to false]
 **chargeable** | **BOOLEAN** |  | [optional] [default to false]
+**invoice** | [**Invoice**](Invoice.md) |  | [optional] 
+**hourly_rate** | **Float** |  | [optional] 
+**hourly_cost** | **Float** |  | [optional] 
 
 

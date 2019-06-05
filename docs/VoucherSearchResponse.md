@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **count** | **Integer** |  | [optional] 
 **version_digest** | **String** | Used to know if the paginated list has changed. | [optional] 
 **values** | [**Array&lt;Voucher&gt;**](Voucher.md) |  | [optional] 
-**total_number_of_postings** | **Integer** |  | [optional] 
+**total_number_of_postings** | **Integer** | [DEPRECATED] Number of postings returned (if postings are returned) | [optional] 
 
 

@@ -317,6 +317,8 @@ opts = {
   is_inactive: false, # BOOLEAN | Equals
   account_manager_id: "account_manager_id_example", # String | List of IDs
   changed_since: "changed_since_example", # String | Only return elements that have changed since this date and time
+  is_wholesaler: true, # BOOLEAN | Equals
+  show_products: true, # BOOLEAN | Equals
   from: 0, # Integer | From index
   count: 1000, # Integer | Number of elements to return
   sorting: "sorting_example", # String | Sorting pattern
@@ -344,6 +346,8 @@ Name | Type | Description  | Notes
  **is_inactive** | **BOOLEAN**| Equals | [optional] [default to false]
  **account_manager_id** | **String**| List of IDs | [optional] 
  **changed_since** | **String**| Only return elements that have changed since this date and time | [optional] 
+ **is_wholesaler** | **BOOLEAN**| Equals | [optional] 
+ **show_products** | **BOOLEAN**| Equals | [optional] 
  **from** | **Integer**| From index | [optional] [default to 0]
  **count** | **Integer**| Number of elements to return | [optional] [default to 1000]
  **sorting** | **String**| Sorting pattern | [optional] 

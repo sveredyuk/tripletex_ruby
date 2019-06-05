@@ -14,8 +14,9 @@ Name | Type | Description | Notes
 **create_company_owned_api_token** | **BOOLEAN** | Create an API token for the company to use to call their clients, only possible for accounting and auditor accounts. The token will be returned in the response. | [optional] [default to false]
 **may_create_tripletex_accounts** | **BOOLEAN** | Should the company we are creating be able to create new Tripletex accounts? | [optional] [default to false]
 **number_of_vouchers** | **String** | Used to calculate prices. | 
+**chart_of_accounts_type** | **String** | The chart of accounts to use for the new company | [optional] 
+**reseller** | **BOOLEAN** |  | [optional] [default to false]
 **accounting_office** | **BOOLEAN** |  | [optional] [default to false]
 **auditor** | **BOOLEAN** |  | [optional] [default to false]
-**reseller** | **BOOLEAN** |  | [optional] [default to false]
 
 

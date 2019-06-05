@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **voucher** | [**Voucher**](Voucher.md) |  | [optional] 
 **bank_statement** | [**BankStatement**](BankStatement.md) |  | [optional] 
 **is_closed** | **BOOLEAN** |  | [optional] [default to false]
-**outgoing_bank_account_balance_currency** | **Float** |  | [optional] 
+**bank_account_closing_balance_currency** | **Float** |  | [optional] 
 **closed_date** | **String** |  | [optional] 
 **closed_by_contact** | [**Contact**](Contact.md) |  | [optional] 
 **closed_by_employee** | [**Employee**](Employee.md) |  | [optional] 

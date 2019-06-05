@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **phone_number_mobile** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **is_private_individual** | **BOOLEAN** |  | [optional] [default to false]
+**show_products** | **BOOLEAN** |  | [optional] [default to false]
 **account_manager** | [**Employee**](Employee.md) |  | [optional] 
 **postal_address** | [**Address**](Address.md) |  | [optional] 
 **physical_address** | [**Address**](Address.md) |  | [optional] 

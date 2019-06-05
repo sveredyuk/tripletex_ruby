@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **sum_remits** | **Float** | The sum of all open remittances of the invoice. Remittances are reimbursement payments back to the customer and are therefore relevant to the bookkeeping of the invoice in the accounts. | [optional] 
 **currency** | [**Currency**](Currency.md) |  | [optional] 
 **is_credit_note** | **BOOLEAN** |  | [optional] [default to false]
+**is_charged** | **BOOLEAN** |  | [optional] [default to false]
 **postings** | [**Array&lt;Posting&gt;**](Posting.md) | The invoice postings, which includes a posting for the invoice with a positive amount, and one or more posting for the payments with negative amounts. | [optional] 
 **reminders** | [**Array&lt;Reminder&gt;**](Reminder.md) | Invoice debt collection and reminders. | [optional] 
 **ehf_send_status** | **String** |  | [optional] 
