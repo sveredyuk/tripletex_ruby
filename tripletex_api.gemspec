@@ -16,7 +16,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "tripletex_api/version"
 
 Gem::Specification.new do |s|
-  s.name        = "tripletex_api"
+  s.name        = "tripletex_api3"
   s.version     = TripletexApi::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
